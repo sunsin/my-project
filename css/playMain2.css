@@ -1,0 +1,109 @@
+body{
+    background: #f3f3f3;
+}
+.nodata{
+    display: table;
+    width: 100%;
+    color: #999;
+    font-size: 1.6rem;
+    background: #f3f3f3;
+}
+.nodata div{
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+.list-group{
+    display: block;
+    margin-bottom: 50px;
+}
+.list-group > span{
+    display: block;
+    margin: 15px 0 9px 0;
+    text-align: center;
+    background: #fff url(../images/playMain/Back_red-ic.png) no-repeat 10px center;
+    background-size: 16px 16px;
+    line-height: 34px;
+    font-size: 1.2rem;
+    color: #434343;
+}
+.list-group-item{
+    padding: 0px;
+    border: none;
+    border-bottom: 10px solid #ebebeb;
+}
+.list-group-item img{
+    margin-bottom: 10px;
+    width:100%;
+    height: 207px;
+}
+.description1 .tit{
+    display: inline-block;
+    color: #434343;
+    font-size: 14px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+.description2{
+    padding-bottom: 10px;
+    overflow: hidden;
+}
+.fl{
+    float: left;
+    width: 70%
+}
+.fr{
+    float: right;
+    margin-right: 10px;
+    color: #6f6f6f;
+}
+.fr1{
+    padding-left: 25px;
+    margin-right: 5px;
+    background: url(../images/playMain/Message_ic.png) no-repeat 0 center;
+    background-size: 16px 14px;
+}
+.fr2{
+    padding-left: 25px;
+    background: url(../images/playMain/Eye_ic.png) no-repeat 0 center;
+    background-size: 16px 14px;
+}
+.description2 .addr{
+    font-size: 12px;
+    color: #6f6f6f;
+    margin-left: 10px;
+}
+.description2 .administrative{
+    font-size: 9px;
+    color: #e54d42;
+    margin-left: 10px;
+}
+a.vlink{
+    position: relative;
+}
+a.vlink > span{
+    position: absolute;
+    top: 80px;
+    left: 50%;
+    margin-left: -20px;
+}
+a.vlink > span >img{
+    width: 40px !important;
+    height: 40px !important;
+}
+.viewnum{
+    position: absolute;
+    left: 10px;
+    bottom: 25px;
+    background: #000;
+    opacity: 0.5;
+    color: #fff;
+    font-size: 1.2rem;
+    padding: 3px 15px;
+    height: 24px;
+    line-height: 20px;
+    border-top-left-radius: 16px;
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+    border-top-right-radius: 16px;
+}

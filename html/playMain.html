@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>大夫说</title>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <script src="../js/jquery-3.0.0.min.js"></script>
+    <script src="../js/bower_components/fastclick/lib/fastclick.js"></script>
+    <script>
+        $(function(){
+            FastClick.attach(document.body);
+        })
+    </script>
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/public.css">
+    <link rel="stylesheet" href="../css/playMain.css">
+    <script src='../js/bootstrap.min.js'></script>
+    <script src="../js/dfs.js"></script>
+    <script src="../js/riot+compiler.min.js"></script>
+    <script src="../js/get_info.js"></script>
+    <style>
+        .page{
+          display: block;
+          padding-bottom: 50px;
+        }
+    </style>
+</head>
+<body>
+    <videoList></videoList>
+
+    <navlists></navlists>
+
+</body>
+<script src="../js/riot+compiler.min.js"></script>
+<script src="../js/riotcontrol.js"></script>
+<script src="../js/store/videoListStore.js"></script>
+<!--<script src="../js/store/videoCommentNumberStore.js"></script>-->
+<script type="riot/tag" src="../js/riot/playMain.tag"></script>
+<script type="riot/tag" src="../js/riot/nav.tag"></script>
+<script type="text/javascript">
+
+    $(function(){
+
+        var  roomVideoListStore = new VideoListStore();
+        RiotControl.addStore(roomVideoListStore);
+
+        riot.mount("*");
+
+
+    })
+</script>
+</html>

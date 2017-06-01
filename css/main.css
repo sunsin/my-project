@@ -1,0 +1,73 @@
+body{
+    background: #f3f3f3;
+}
+.nav{
+    width: 95%;
+    margin: 15px auto 10px auto;
+    text-align: center;
+}
+.nav a{
+    border: 2px solid #e54d42;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    color: #333;
+    background:#fff;
+    height: 35px;
+    line-height: 35px;
+}
+.list-group > span{
+    display: block;
+    padding-left: 30px;
+    background: #FFF url(../images/Hot_ic.png) no-repeat 10px center;
+    background-size: 14px 14px;
+    font-size:  1.2rem;
+    color: #434343;
+    line-height: 25px;
+}
+.list-group-item{
+    padding: 0px;
+    margin-top: 9px;
+    border: none;
+}
+.list-group-item img{
+    margin-bottom: 10px;
+    width:100%;
+    height: 207px;
+}
+.description1{
+    overflow: hidden;
+}
+.description1 .tit{
+    display: inline-block;
+    color: #434343;
+    font-size: 12px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+.classification{
+    float: right;
+    margin-right: 10px;
+    padding: 0 5px;
+    font-size: 1.2rem;
+    color: #e54d42;
+    border: 1px solid #e54d42;
+    border-radius: 5px;
+}
+.description2{
+    padding-bottom: 10px;
+    overflow: hidden;
+}
+.description2 .addr{
+    font-size: 9px;
+    color: #6f6f6f;
+    margin-left: 10px;
+}
+.description2 .administrative{
+    font-size: 9px;
+    color: #e54d42;
+    margin-left: 10px;
+}
+.list-group img{
+    width: 100%;
+    height: auto;
+}

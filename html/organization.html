@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>大夫说</title>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <script src="../js/jquery-3.0.0.min.js"></script>
+    <script src="../js/bower_components/fastclick/lib/fastclick.js"></script>
+    <script>
+        $(function(){
+            FastClick.attach(document.body);
+        })
+    </script>
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+    <script src='../js/bootstrap.min.js'></script>
+    <link rel="stylesheet" href="../css/public.css">
+    <link rel="stylesheet" href="../css/organization.css">
+    <script src="../js/dfs.js"></script>
+
+
+</head>
+<body>
+    <div class="forword">
+        <div class="back"><span>医院</span></div>
+    </div>
+    <organization></organization>
+    <!--
+    <nav class="navbar navbar-default navbar-fixed-bottom">
+        <div class="container">
+            <div class="col-md-4 col-xs-4">
+                <a href="../index.html">首页</a>
+            </div>
+            <div class="col-md-4 col-xs-4">
+                <a href="../topic.html">频道</a>
+            </div>
+            <div class="col-md-4 col-xs-4">
+                <a href="mine.html">我的</a>
+            </div>
+        </div>
+    </nav>
+    -->
+</body>
+<script src="../js/riot+compiler.min.js"></script>
+<script src="../js/riotcontrol.js"></script>
+<script src="../js/store/videoListStore.js"></script>
+<script type="riot/tag" src="../js/riot/organization.tag"></script>
+<script type="text/javascript">
+
+    $(function(){
+        //var vstore = new VideoListStore();
+        //RiotControl.addStore(vstore);
+        riot.mount("*");
+    })
+</script>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>大夫说</title>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <script src="../js/jquery-3.0.0.min.js"></script>
+    <script src="../js/bower_components/fastclick/lib/fastclick.js"></script>
+    <script>
+        $(function(){
+            FastClick.attach(document.body);
+        });
+    </script>
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/public.css">
+    <link rel="stylesheet" href="../css/channel.css">
+    <script src='../js/bootstrap.min.js'></script>
+    <script src="../js/get_info.js"></script>
+    <script src="../js/dfs.js"></script>
+    <script src="../js/riot+compiler.min.js"></script>
+
+</head>
+<body>
+<channel></channel>
+<navlists></navlists>
+</body>
+<script type="riot/tag" src="../js/riot/channel.tag"></script>
+<script type="riot/tag" src="../js/riot/nav.tag"></script>
+<script type="text/javascript">
+    $(function(){
+        riot.mount("*");
+    })
+
+</script>
+</html>

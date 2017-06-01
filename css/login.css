@@ -1,0 +1,301 @@
+button {
+  background: #e54d42;
+  border-color: #e54d42;
+  color: #fff;
+}
+/*regiter*/
+.regiter form .first input,
+.regiter form .first button {
+  display: block;
+  width: 94%;
+  margin: 10px auto;
+  height: 35px;
+  border-radius: 5px;
+  padding-left: 10px;
+  font-size: 1.2rem;
+  color: #6f6f6f;
+  line-height: 35px;
+}
+.regiter form .first button {
+  color: #fff;
+}
+.regiter form .first label:nth-child(1) {
+  display: block;
+  overflow: hidden;
+  margin: 0;
+  margin-left: 3%;
+}
+.regiter form .first label:nth-child(1) input {
+  float: left;
+  display: inline-block;
+  width: 70%;
+  margin-bottom: 0 !important;
+}
+.regiter form .first label:nth-child(1) button {
+  float: left;
+  display: inline-block;
+  width: 27%;
+  margin-bottom: 0;
+  line-height: 28px;
+}
+.regiter form .checkbox {
+  text-align: right;
+}
+.regiter form .clause {
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  bottom: 20px;
+}
+.regiter form .submit {
+  margin-top: 40px;
+}
+/*login*/
+.login .first {
+  text-align: center;
+  margin-top: 15px;
+}
+.login .first input,
+.login .first button {
+  width: 94%;
+  height: 40px;
+  padding-left: 10px;
+  border: none;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1.4rem;
+  line-height: 40px;
+  margin-top: 10px;
+}
+.login .first input {
+  color: #6f6f6f;
+}
+.login .first button {
+  margin-top: 30px;
+  background: #e54d42;
+  color: #fff;
+}
+.login .first a {
+  display: block;
+  text-align: right;
+  margin-top: 5px;
+  color: #75b6ff;
+  font-size: 1.2rem;
+}
+.login .otherway {
+  margin-top: 80px;
+  text-align: center;
+}
+.login .otherway h4 {
+  font-weight: normal;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ccc;
+  color: #75b6ff;
+  font-size: 1.2rem;
+}
+.login .otherway a {
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  margin: 0 10px;
+}
+.login .otherway a:nth-child(1) {
+  background: url(../images/login/2.pic_hd.jpg) no-repeat center center;
+  background-size: 50px 50px;
+}
+.login .otherway a:nth-child(2) {
+  background: url(../images/login/3.pic_hd.jpg) no-repeat center center;
+  background-size: 50px 50px;
+}
+.login .otherway a:nth-child(3) {
+  background: url(../images/login/1.pic_hd.jpg) no-repeat center center;
+  background-size: 50px 50px;
+}
+/*修改密码change*/
+.change div:first-child {
+  border-top: 1px solid #ccc;
+  padding: 20px 10px 0 0;
+  text-align: right;
+}
+.change div:first-child .save {
+  color: #e54d42;
+}
+.change div:first-child .cancle {
+  color: #6f6f6f;
+  margin-right: 25px;
+}
+/*modification*/
+.modification .choose {
+  border-top: 1px solid #ccc;
+  padding: 20px 10px 0 0;
+  text-align: right;
+}
+.modification .choose a {
+  display: block;
+  font-size: 1px;
+}
+.modification .choose a:nth-child(1) {
+  color: #e54d42;
+  text-decoration: underline;
+  padding-bottom: 5px;
+}
+.modification .choose a:nth-child(2) {
+  color: #6f6f6f;
+}
+.modification .personalMsg > div {
+  padding-left: 10px;
+  font-size: 1rem;
+  line-height: 35px;
+  color: #6f6f6f;
+  border-bottom: 1px solid #ccc;
+}
+.modification .personalMsg .pic {
+  margin: 10px 0 30px 10px;
+  width: 55px;
+  height: 55px;
+  border: 1px solid #e54d42;
+  background: url(../images/login/I_ic.png) no-repeat center center;
+  background-size: 25px 25px;
+}
+.modification .personalMsg .chooseClassification {
+  border: none;
+  overflow: hidden;
+  padding: 0 !important;
+  text-align: center;
+}
+.modification .personalMsg .chooseClassification div {
+  padding: 0;
+  color: #6f6f6f;
+  font-size: 1rem;
+}
+.modification .personalMsg .chooseClassification div:nth-child(1) {
+  background: #ccc;
+}
+.modification .personalMsg .chooseClassification div:nth-child(2),
+.modification .personalMsg .chooseClassification div:nth-child(3) {
+  text-align: center;
+}
+.modification .personalMsg .chooseClassification div:nth-child(2) li,
+.modification .personalMsg .chooseClassification div:nth-child(3) li {
+  border: 1px solid #ccc;
+}
+/*修改个人信息edit  医生编辑信息*/
+.changes {
+  display: block;
+  width: 55px;
+  height: 55px;
+  border: none;
+  padding-left: 10px;
+}
+.edit ul:nth-child(1),
+.useredit ul:nth-child(1) {
+  display: block;
+  width: 55px;
+  height: 55px;
+  border: 1px solid #ed4543;
+  padding-left: 10px;
+}
+.edit ul li ul,
+.useredit ul li ul {
+  display: block;
+  width: 55px;
+  height: 55px;
+  border: 1px solid #ed4543;
+  padding-left: 10px;
+}
+.edit ul li ul li,
+.useredit ul li ul li {
+  display: none;
+}
+.edit ul img,
+.useredit ul img {
+  width: 55px;
+  height: 55px;
+}
+.edit .complete,
+.useredit .complete {
+  text-align: right;
+  margin-right: 10px;
+}
+.edit .complete a,
+.useredit .complete a,
+.edit .complete span,
+.useredit .complete span {
+  font-size: 1.2rem;
+}
+.edit .complete a:nth-child(1),
+.useredit .complete a:nth-child(1),
+.edit .complete span:nth-child(1),
+.useredit .complete span:nth-child(1) {
+  padding-right: 25px;
+  color: #6f6f6f;
+}
+.edit .complete a:nth-child(2),
+.useredit .complete a:nth-child(2),
+.edit .complete span:nth-child(2),
+.useredit .complete span:nth-child(2) {
+  color: #e54d42;
+}
+.edit .personalMsg form,
+.useredit .personalMsg form {
+  margin: 0 10px;
+  padding-top: 10px;
+}
+.edit .personalMsg form > div,
+.useredit .personalMsg form > div {
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+.edit .personalMsg form > div > span,
+.useredit .personalMsg form > div > span {
+  padding: 0;
+  color: #6f6f6f;
+  font-size: 1.4rem;
+  line-height: 40px;
+}
+.edit input,
+.useredit input {
+  display: inline;
+  height: 40px;
+  border-radius: 5px;
+  padding-left: 10px;
+  font-size: 1.4rem;
+  color: #6f6f6f;
+  line-height: 40px;
+}
+.edit .chooseClassification,
+.useredit .chooseClassification {
+  border: none;
+  overflow: hidden;
+  padding: 0 !important;
+  text-align: center;
+}
+.edit .chooseClassification div,
+.useredit .chooseClassification div {
+  padding: 0;
+  color: #6f6f6f;
+  font-size: 1rem;
+  line-height: 35px;
+}
+.edit .chooseClassification div:nth-child(1),
+.useredit .chooseClassification div:nth-child(1) {
+  background: #ccc;
+}
+.edit .chooseClassification div:nth-child(2),
+.useredit .chooseClassification div:nth-child(2),
+.edit .chooseClassification div:nth-child(3),
+.useredit .chooseClassification div:nth-child(3) {
+  text-align: center;
+}
+.edit .chooseClassification div:nth-child(2) li,
+.useredit .chooseClassification div:nth-child(2) li,
+.edit .chooseClassification div:nth-child(3) li,
+.useredit .chooseClassification div:nth-child(3) li {
+  border: 1px solid #ccc;
+}
+.useredit .complete {
+  margin: 10px 0 30px 0;
+}
+.useredit .complete a:nth-child(1) {
+  color: #e54d42;
+}

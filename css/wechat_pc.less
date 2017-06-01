@@ -1,0 +1,622 @@
+@red: #ed4542;
+body{
+	overflow-x: hidden !important;
+}
+ul,li{
+	list-style: none;
+}
+.text{
+	overflow:hidden; 
+	text-overflow:ellipsis; 
+	white-space:nowrap;
+}
+.text2{
+	overflow: hidden;
+  	text-overflow: ellipsis;
+  	display: -webkit-box;
+  	-webkit-line-clamp: 2;
+  	-webkit-box-orient: vertical;
+}
+
+.search{
+    display: block;
+    overflow: hidden;
+    position: relative;
+    padding: 7px 10px;
+    background: @red;
+  	a{
+	    &:nth-child(1){
+	        float: left;
+	        width: 30%;
+	        line-height: 29px;
+	        img{
+	        	width: 80px;
+	        	height: 25px;
+	        }
+	    }
+	    &:nth-child(2){
+	      	float: right;
+	      	width: 70%;
+	      	span{
+	        	display: inline-block;
+		        width: 100%;
+		        float: right;
+		        height: 30px;
+		        line-height: 30px;
+		        color: #999;
+		        font-size: 1.2rem;
+		        margin: 0 auto;
+		        border: 1px solid #fff;
+		        padding: 0 10px;
+		        border-radius: 5px;
+		        background: #fff url(../images/icon/search-red.png) no-repeat 94% center;
+		        background-size: 17px 17px;
+	      	}
+	    }
+  	}
+}
+.carousel {
+  	display: block;
+  	.item img {
+  		width: 100%;
+  		height: 200px !important;
+	}
+	.carousel-indicators {
+  		bottom: 50px;
+  		right: 10px;
+  		margin: 0;
+	}
+	.carousel-caption{
+		width: 100%;
+		background: rgba(0,0,0,0.5);
+		color: #fff;
+		padding: 10px 0 10px 10px;
+		left: 0;
+		bottom: 0;
+		text-align: left;
+	}
+}
+
+.index_tab{
+	div{
+		ul{
+			width: 99%;
+			overflow: hidden;
+			margin: 0 auto;
+			padding: 0;
+			li{
+				float: left;
+				width: 33%;
+				margin: 10px 0;
+				text-align: center;
+				img{
+					width: 55px;
+					height: 55px;
+				}
+				div{
+					margin-top: 10px;
+					font-size: 1.5rem;
+					color: #434343;
+				}
+			}
+		}
+	}
+}
+
+.wechat{
+	display: block;
+	overflow-x: hidden;
+	margin-bottom: 55px;
+}
+
+
+.wechatTab{
+	display: block;
+	overflow: hidden;
+	.topicTab{
+		overflow: hidden;
+		position: relative;
+		padding: 15px 0 15px 10px;
+		line-height: 30px;
+		border-top: 5px solid #ebebeb;
+		span{
+			float: left;
+			padding-left: 10px;
+			font-size: 1.5rem;
+			color: #434343;
+		}
+		a{
+			display: inline-block;
+			float: right;
+			padding-right: 10px;
+			font-size: 1.2rem;
+			color: #434343;
+		}
+	}
+	.topicTab:before{
+		content: "";
+		display: block;
+		width: 5px;
+		height: 15px;
+		background: @red;
+		position: absolute;
+		top: 20px;
+	}
+}
+	//热门视频
+	.hot-item{
+		float: left;
+		width: 50%;
+	    box-sizing: border-box;
+	    &:nth-child(even){
+	    	padding: 0 5px 5px 10px;
+	    }
+	    &:nth-child(odd){
+	    	padding: 0 10px 5px 3px;
+	    }
+		.cover{
+			position: relative;
+			>img{
+				width: 100%;
+				height: 200px;
+			}
+			.watermark {
+				position: absolute;
+				top: 90px;
+				left: 50%;
+				margin-left: -20px;
+				margin-top: -20px;
+				img {
+				  	width: 40px;
+				  	height: 40px;
+				}
+			}
+		}
+		.title{
+			text-align: left;
+			font-size: 1.4rem;
+			color: #434343;
+			overflow:hidden; 
+			text-overflow:ellipsis; 
+			white-space:nowrap;
+		}
+		.info{
+			overflow: hidden;
+			div{
+				float: left;
+				font-size: 1.2rem;
+				color: #999;
+				padding-left: 20px;
+				padding-right: 20px;
+			}
+			.comLen{
+				background: url(../images/playMain/Message_ic.png) no-repeat 0 center;
+				background-size: 17px 13px;
+			}
+			.eyeLen{
+				background: url(../images/playMain/Eye_ic.png) no-repeat 0 center;
+				background-size: 17px 13px;
+			}
+		}
+		
+	}
+	// 入驻医生
+	.doctor-item{
+		//float: left;
+		//width: 25%;
+		display: block;
+		box-sizing: border-box;
+		padding-bottom: 5px;
+		.doctor-avatar{
+			img{
+				//width: 100%;
+				margin: 0 auto;
+				border-radius: 50%;
+				//padding: 0 15px 7px 15px;
+			}
+		}
+		div{
+			text-align: center;
+			font-size: 1.2rem;
+			color: #999;
+			line-height: 20px;
+			.text();
+		}
+		.nick{
+			font-size: 1.4rem;
+			color: #434343;
+		}
+		.minh{
+			height: 18px;
+		}
+	}
+
+	//推荐视频
+	.recommend-item{
+		display: block;
+		float: left;
+		width: 50%;
+		box-sizing: border-box;
+
+		.cover{
+			position: relative;
+			>img{
+				width: 100%;
+				height: 100px;
+			}
+			.watermark {
+				position: absolute;
+				top: 50px;
+				left: 50%;
+				margin-left: -20px;
+				margin-top: -20px;
+				img {
+				  	width: 40px;
+				  	height: 40px;
+				}
+			}
+		}
+		.title{
+			padding: 5px 0;
+			text-align: left;
+			.text();
+		}
+		.infol{
+			span{
+				font-size: 1.2rem;
+				color: #999;
+				padding-left: 20px;
+				padding-right: 20px;
+				&:nth-child(1){
+					background: url(../images/playMain/Message_ic.png) no-repeat 0 center;
+					background-size: 17px 13px;
+				}
+				&:nth-child(2){
+					background: url(../images/playMain/Eye_ic.png) no-repeat 0 center;
+					background-size: 17px 13px;
+				}
+			}
+		}
+
+	}
+	.recommend{
+		ul{
+			padding: 0;
+			margin: 0;
+			li{
+				list-style: none;
+				&:nth-child(1){
+					.recommend-item{
+						width: 100%;
+						padding: 0 10px 5px 10px !important;
+						.cover{
+							>img{
+								width: 100%;
+								height: 150px;
+							}
+							.watermark {
+								position: absolute;
+								top: 50px;
+								left: 50%;
+								margin-left: -20px;
+								margin-top: 0px;
+								img {
+								  	width: 40px;
+								  	height: 40px;
+								}
+							}
+						}
+						
+					}
+				}
+				&:nth-child(even){
+					.recommend-item{
+						padding: 0 5px 5px 10px;
+					}
+			    	
+			    }
+			    &:nth-child(odd){
+			    	.recommend-item{
+			    		padding: 0 10px 5px 3px;
+			    	}
+			    	
+			    }
+			}
+		}
+	}
+
+	//健康专题
+	.health-item{
+		overflow: hidden;
+		position: relative;
+		float: left;
+		width: 50%;
+	    box-sizing: border-box;
+	    &:nth-child(even){
+	    	padding: 0 5px 5px 10px;
+	    }
+	    &:nth-child(odd){
+	    	padding: 0 10px 5px 5px;
+	    }
+	  
+	    .cover{
+	    	
+			img{
+				width: 100%;
+				height: 100px;
+			}
+			.bg{
+				position: absolute;
+				top: 0;
+				background: rgba(0,0,0,0.3);
+				width: 92%;
+				height: 100px;
+			}
+		}
+		.title{
+			position: absolute;
+			width: 100%;
+			color: #fff;
+			background: rgba(0,0,0,0);
+			top: 33px;
+		}
+	}
+
+
+	.video-item{
+		display: block;
+		overflow: hidden;
+		padding: 0 10px 5px 10px;
+		box-sizing: border-box;
+		border-bottom: 5px solid #ebebeb;
+		margin: 5px 0;
+		>div{
+			width: 50%;
+			float: left;
+		}
+		.cover{
+			position: relative;
+			>img{
+				width: 100%;
+				height: 100px;
+			}
+			.watermark {
+				position: absolute;
+				top: 50px;
+				left: 50%;
+				margin-left: -20px;
+				margin-top: -20px;
+				img {
+				  	width: 40px;
+				  	height: 40px;
+				}
+			}
+		}
+		.txt{
+			position: relative;
+			height: 200px;
+			.info{
+				position: absolute;
+				bottom: 5px;
+			}
+		}
+		.title{
+			padding: 5px 0;
+			text-align: left;
+			.text();
+		}
+		.info{
+			span{
+				font-size: 1.2rem;
+				color: #999;
+				padding-left: 20px;
+				padding-right: 20px;
+				&:nth-child(1){
+					background: url(../images/playMain/Message_ic.png) no-repeat 0 center;
+					background-size: 17px 13px;
+				}
+				&:nth-child(2){
+					background: url(../images/playMain/Eye_ic.png) no-repeat 0 center;
+					background-size: 17px 13px;
+				}
+			}
+		}
+		
+
+
+	}
+.doctorList{
+	ul{
+		margin: 0;
+		padding: 0;
+		white-space: nowrap;
+	    //overflow-x: auto;
+	    overflow-y: inherit;
+		li{
+			list-style: none;
+			display: inline-block;
+			width: 22%;
+			padding: 0 10px;
+			img{
+				width: 100%;
+			}
+		}
+	}
+}
+// registration.help,disease
+.registration-item{
+	display: block;
+	overflow: hidden;
+	padding: 10px;
+	border-bottom: 1px solid #ebebeb;
+	>div{
+		float: left;
+	}
+	.cover{
+		width: 20%;
+		img{
+			width: 45px;
+			height: 45px;
+			border-radius: 50%;
+		}
+	}
+	.regis-msg{
+		.regis-hos{
+			font-size: 1.5rem;
+			color: #434343;
+		}
+		.regis-info{
+			margin-top: 5px;
+			font-size: 1.2rem;
+			color: #6f6f6f;
+			span{
+				padding-left: 20px;
+				&:nth-child(1){
+					background: url(../images/H5/ic_rank.png) no-repeat 0 center;
+					background-size: 15px 14px;
+				}
+				&:nth-child(2){
+					background: url(../images/H5/ic_location.png) no-repeat 0 center;
+					background-size: 10px 13px;
+				}
+			}
+		}
+	}
+}
+
+.help-item{
+	display: block;
+	overflow: hidden;
+	padding: 0 10px 5px 10px;
+	box-sizing: border-box;
+	border-bottom: 5px solid #ebebeb;
+	margin: 5px 0;
+	>div{
+		&:nth-child(1){
+			width: 40%;
+		}
+		&:nth-child(2){
+			width: 60%;
+		}
+		//width: 50%;
+		float: left;
+	}
+	.cover{
+		>img{
+			width: 100%;
+			height: 200px;
+		}
+	}
+	.txt{
+		height: 200px;
+		position: relative;
+		padding-left: 10px;
+		.info{
+			overflow: hidden;
+			font-size: 1.2rem;
+			width: 100%;
+			line-height: 160px;
+			div{
+				font-size: 1.4rem;
+				&:nth-child(1){
+					float: left;
+					color: #e54d42;
+					span{
+						font-size: 3rem;
+					}
+				}
+				&:nth-child(2){
+					float: right;
+					color: #2196f3;
+				}
+			}
+		}
+		.content{
+			.text2();
+		}
+	}
+	.title{
+		padding: 3px 0;
+		text-align: left;
+		font-size: 1.8rem;
+		color: #434343;
+		.text2();
+	}
+	.content{
+		font-size: 1rem;
+		color: #6f6f6f;
+	}
+	.contentDetail{
+		overflow: hidden;
+		display: none;
+		border: 1px solid #ccc;
+		border-radius: 5px;
+		margin-top: 5px;
+		padding: 0px 10px 20px 10px;
+		font-size: 1rem;
+		color: #6f6f6f;
+		div{
+			text-align: right;
+			img{
+				margin: 5px 0px;
+				width: 15px;
+				height: 15px;
+			}
+		}
+	}
+	.contentShow{
+		text-align: right;
+		padding: 10px 0 0 0;
+		color: #bbb;
+		font-size: 1rem;
+	}
+}
+
+.disease{
+	display: block;
+	overflow: hidden;
+	>ul{
+		float: left;
+		width: 40%;
+		text-align: center;
+		li{
+			width: 100%;
+			border-bottom: 1px solid #ccc;
+			background: #ebebeb;
+			margin: 0;
+			a{
+				font-size: 1.5rem;
+				color: #434343;
+				padding: 10px 0;
+				margin: 0;
+				border: 0;
+			}
+		}
+		
+	}
+	>div{
+		float: left;
+		width: 60%;
+		ul{
+			margin: 0;
+			padding: 0;
+			text-align: center;
+			.tags-item{
+				display: block;
+				border-bottom: 1px solid #ccc;
+				div{
+					font-size: 1.5rem;
+					color: #434343;
+					padding: 10px 0;
+				}
+			}
+		}
+	}
+	
+}
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover{
+	border: none;
+}
+.active{
+	background: #fff !important;
+}

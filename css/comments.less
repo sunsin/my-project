@@ -1,0 +1,36 @@
+.allComments{
+	display: block;
+	overflow: hidden;
+	margin-bottom: 60px;
+	.commentItem{
+		display: block;
+		overflow: hidden;
+		border-bottom: 1px solid #ebebeb;
+		margin: 10px;
+		img{
+			float: left;
+			width: 40px;
+			height: 40px;
+			border-radius: 50%;
+			margin: 0px 10px 10px 0;
+		}
+		>div{
+			float: left;
+			margin-top: 10px;
+			&:nth-child(1){
+				width: 15%;
+			}
+			&:nth-child(2){
+				width: 85%;
+			}
+			.nickname{
+				font-size: 1.4rem;
+				color: @fz-one;
+			}
+			.content{
+				font-size: 1.2rem;
+				color: @fz-two;
+			}
+		}
+	}
+}

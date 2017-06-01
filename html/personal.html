@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>大夫说</title>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <script src="../js/bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="../js/bower_components/fastclick/lib/fastclick.js"></script>
+    <script>
+        $(function(){
+            FastClick.attach(document.body);
+        })
+    </script>
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/public.css">
+    <link rel="stylesheet" href="../css/mineRevision.css">
+    <script src='../js/bootstrap.min.js'></script>
+    <script src="../js/dfs.js"></script>
+    <script src="../js/get_info.js"></script>
+</head>
+<body>
+    <personal></personal>
+    <nav></nav>
+</body>
+<!--<script src="../js/get_info.js"></script>-->
+<script src="../js/riot+compiler.min.js"></script>
+<script src="../js/riotcontrol.js"></script>
+<script src="../js/store/answerStore.js"></script>
+<script type="riot/tag" src="../js/riot/personal.tag"></script>
+<script type="riot/tag" src="../js/riot/nav.tag"></script>
+<script type="text/javascript">
+    $(function(){
+        //test();
+        var  userInformationStore = new AnswerStore();
+        RiotControl.addStore(userInformationStore);
+        riot.mount("*");
+
+    })
+</script>
+
+<script>
+
+    $(function(){
+
+
+    })
+</script>
+</html>

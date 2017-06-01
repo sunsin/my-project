@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>大夫说</title>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <script src="../js/jquery-3.0.0.min.js"></script>
+    <script src="../js/bower_components/fastclick/lib/fastclick.js"></script>
+    <script>
+        $(function(){
+            FastClick.attach(document.body);
+        })
+    </script>
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+    <script src='../js/bootstrap.min.js'></script>
+    <link rel="stylesheet" href="../css/public.css"/>
+    <script src="../js/dfs.js"></script>
+    <!-- <link rel="stylesheet" href="../css/doctorDetail.css"> -->
+    <script src="../js/bower_components/qrcode.js/qrcode.js"></script>
+    <script src="../js/get_info.js"></script>
+    <!--<script src="../js/dfs_weixin.js"></script>-->
+</head>
+<body>
+<recommend></recommend>
+<navlists></navlists>
+</body>
+
+<script src="../js/riot+compiler.min.js"></script>
+<script src="../js/riotcontrol.js"></script>
+<script src="../js/store/videoDetailStore.js"></script>
+<script type="riot/tag" src="../js/riot/recommend.tag"></script>
+<script type="riot/tag" src="../js/riot/nav.tag"></script>
+<script type="text/javascript">
+
+    $(function(){
+
+        var vdstore = new VideoDetailStore();
+        RiotControl.addStore(vdstore);
+        riot.mount("*");
+    })
+</script>
+</html>

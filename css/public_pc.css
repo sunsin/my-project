@@ -1,0 +1,436 @@
+html {
+  font-size: 62.5%;
+}
+/*
+@font-face {
+  font-family: 'Glyphicons Halflings';
+  src: url('../fonts/glyphicons-halflings-regular.eot');
+  src: url('../fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/glyphicons-halflings-regular.woff') format('woff'),
+  url('../fonts/glyphicons-halflings-regular.ttf') format('truetype'),
+  url('../fonts/glyphicons-halflings-regular.svg#glyphicons-halflingsregular') format('svg');
+}
+*/
+input,
+button {
+  border: none;
+  border: 1px solid #eee;
+}
+a {
+  display: block;
+}
+a:link,
+a:hover {
+  text-decoration: none;
+}
+input:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: #434343;
+}
+input::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: #434343;
+}
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+  color: #434343;
+}
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+  color: #434343;
+}
+img {
+  object-fit: cover;
+}
+.col-xs-6 {
+  padding: 10px;
+}
+/*top大夫说*/
+.title {
+  padding: 10px 0;
+  text-align: center;
+  background: #fff;
+}
+.title img {
+  width: 65px;
+  height: 20px;
+}
+.forword,
+.toChannel {
+  background: #ededed url(../images/playMain/Back_ic.png) no-repeat 10px center;
+  background-size: 20px 16px;
+  height: 40px;
+  line-height: 40px;
+  font-size: 1.8rem;
+  color: #6f6f6f;
+  text-align: center;
+}
+.forword img,
+.toChannel img {
+  text-align: left;
+}
+.forword span,
+.toChannel span {
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.nav {
+  overflow: hidden;
+  display: block;
+  white-space: nowrap;
+  overflow-x: auto;
+  overflow-y: inherit;
+  /*height: 35px;*/
+  /*line-height: 35px;*/
+  background: #fff;
+  border-bottom: 1px solid #f3f3f3;
+}
+.nav .line {
+  margin: 0;
+  padding: 0;
+  padding-left: 10px;
+  white-space: nowrap;
+}
+.nav .line li {
+  list-style: none;
+  display: inline-block;
+  padding: 5px 10px;
+  font-size: 1.6rem;
+}
+/*底部导航*/
+nav .container {
+  height: 51px;
+  padding: 0;
+}
+nav .container > div {
+  padding: 0;
+  text-align: center;
+}
+nav .container > div a {
+  display: inline-block;
+  padding: 30px 40px 0 40px;
+  font-size: 1rem;
+  line-height: 16px;
+  color: #999;
+}
+nav .container > div:nth-child(1) a {
+  background: url(../images/iOS-tag-ic/Home_tag_hpage@2x.png) no-repeat center 5px;
+  background-size: 22px 22px;
+}
+nav .container > div:nth-child(2) a {
+  background: url(../images/iOS-tag-ic/Home_tag_cha@2x.png) no-repeat center 5px;
+  background-size: 22px 22px;
+}
+nav .container > div:nth-child(3) a {
+  background: url(../images/iOS-tag-ic/Home_tag_I@2x.png) no-repeat center 5px;
+  background-size: 22px 22px;
+}
+.pager {
+  background: #ebebeb;
+  padding: 10px 0 66px 0;
+  margin: 0 !important;
+}
+.pager li a {
+  color: #434343;
+}
+.comment .videoCommentTotal {
+  overflow: hidden;
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+}
+.comment .videoCommentTotal > div {
+  float: left;
+}
+.comment .videoCommentTotal > div:nth-child(2) {
+  float: right;
+  width: 80%;
+  font-size: 1.2rem;
+  color: #6f6f6f;
+  border: 1px solid #ebebeb;
+  border-radius: 5px;
+  background: #f3f3f3;
+  padding: 9px;
+}
+.comment .videoCommentTotal > div:nth-child(2) a {
+  font-size: 1.4rem;
+  color: #6f6f6f;
+}
+.comment .videoCommentTotal > div img {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+}
+.comment .videoCommentTotal .total {
+  position: relative;
+}
+.comment .videoCommentTotal .total:before {
+  content: "";
+  position: absolute;
+  left: -12px;
+  top: 5px;
+  width: 0;
+  border: 10px solid transparent;
+  border-bottom-color: #f3f3f3;
+}
+.comment .commentTitle {
+  padding: 20px 0 0 10px;
+  font-size: 1.6rem;
+  color: #6f6f6f;
+}
+.comment .comment-item {
+  display: block;
+  overflow: hidden;
+  padding: 20px 10px;
+  border-bottom: 1px solid #eee;
+}
+.comment .comment-item > div {
+  float: left;
+}
+.comment .comment-item .commentHeadPng {
+  width: 13%;
+}
+.comment .comment-item .commentHeadPng img {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+}
+.comment .comment-item .commentMessage {
+  width: 87%;
+  padding-right: 10px;
+}
+.comment .comment-item .commentMessage .commentUserName {
+  margin-bottom: 5px;
+  font-size: 1.4rem;
+  color: #6f6f6f;
+}
+.comment .comment-item .commentMessage .commentContent {
+  font-size: 1.4rem;
+  color: #434343;
+}
+.comment .nocomment {
+  padding: 20px 10px;
+  text-align: center;
+  color: #999;
+  font-size: 1.4rem;
+  border-bottom: 1px solid #eee;
+}
+.comment .alink {
+  text-align: center;
+  border-top: 1px solid #eee;
+  border-bottom: 5px solid #eee;
+}
+.comment .alink a {
+  display: block;
+  padding: 8px 0;
+  color: #75b6ff;
+  font-size: 1.4rem;
+}
+.commentList {
+  display: block;
+  overflow: hidden;
+  margin-bottom: 60px;
+  border-bottom: 1px solid #ebebeb;
+}
+.commentList .commentItem {
+  display: block;
+  overflow: hidden;
+  
+  margin: 10px;
+}
+.commentList .commentItem img {
+  float: left;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin: 0px 10px 10px 0;
+}
+.commentList .commentItem > div {
+  float: left;
+  margin-top: 10px;
+}
+.commentList .commentItem > div:nth-child(1){
+    width: 15%;
+}
+.commentList .commentItem > div:nth-child(2){
+    width: 85%;
+}
+.commentList .commentItem > div .nickname {
+  font-size: 1.4rem;
+  color: #434343;
+}
+.commentList .commentItem > div .content {
+  font-size: 1.2rem;
+  color: #6f6f6f;
+}
+.praiseCancle{
+  background: url(../images/icon/praise-sel.png) no-repeat 0 center !important;
+  background-size: 19px 19px;
+}
+.comment-footer {
+  display: block;
+  width: 100%;
+  background: #fff;
+  position: fixed;
+  bottom: 0px;
+}
+.comment-footer .discuss {
+  overflow: hidden;
+  width: 96%;
+  padding: 10px;
+  border-bottom: 1px solid #e54d42;
+  margin: 0 auto;
+  margin-bottom: 10px;
+}
+.comment-footer .discuss input,
+.comment-footer .discuss button {
+  float: left;
+  font-size: 1.4rem;
+  height: 35px;
+  line-height: 35px;
+  border: none;
+}
+.comment-footer .discuss input {
+  width: 80%;
+  color: #434343;
+}
+.comment-footer .discuss button {
+  background: #fff;
+  width: 20%;
+  font-size: 1.6rem;
+  color: #e54d42;
+}
+.nodata {
+  display: table;
+  width: 100%;
+  color: #999;
+  height: 240px;
+  font-size: 1.6rem;
+  background: #f3f3f3;
+}
+.nodata div {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+/*基本样式*/
+.list-group {
+  overflow: hidden;
+  margin-bottom: 0;
+}
+.list-group .list-group-item {
+  overflow: hidden;
+  position: relative;
+  border: none;
+  border-bottom: 10px solid #ebebeb;
+  padding: 0;
+}
+.list-group .list-group-item > a > div:nth-child(1) {
+  position: relative;
+  height: 220px;
+}
+.list-group .list-group-item > div {
+  padding: 10px;
+}
+.list-group .list-group-item > div:nth-child(1) {
+  padding-top: 10px;
+  position: relative;
+  height: 220px;
+}
+.list-group .list-group-item .videoMessage {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  color: #ccc;
+}
+.list-group .list-group-item .fr1 {
+  padding-left: 25px;
+  margin-right: 5px;
+  background: url(../images/playMain/Message_ic.png) no-repeat 0 center;
+  background-size: 16px 14px;
+}
+.list-group .list-group-item .fr2 {
+  padding-left: 25px;
+  background: url(../images/playMain/Eye_ic.png) no-repeat 0 center;
+  background-size: 16px 14px;
+}
+.list-group .list-group-item .more-video-img {
+  height: 200px;
+}
+.list-group .list-group-item > a > div:nth-child(2) {
+  padding: 10px;
+  color: #6f6f6f;
+}
+.list-group .list-group-item img {
+  width: 100%;
+}
+.list-group .list-group-item span.watermark {
+  position: absolute;
+  top: 90px;
+  left: 50%;
+  margin-left: -20px;
+}
+.list-group .list-group-item span.watermark img {
+  width: 40px;
+  height: 40px;
+}
+.list-group .list-group-item .listTitle {
+  font-size: 1.4rem;
+  color: #434343;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  word-break: break-all;
+  overflow: hidden;
+  /*
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      */
+}
+.list-group .list-group-item .listTxt {
+  margin-top: 10px;
+  font-size: 1.2rem;
+  color: #6f6f6f;
+  /*overflow: hidden;*/
+  /*white-space: nowrap;*/
+  /*text-overflow: ellipsis;*/
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    word-break: break-all;
+    overflow: hidden;
+}
+.viewNum {
+  position: absolute;
+  bottom: 10px;
+  right: 5% !important;
+  background: url(../images/doctor/Eye_ic.png) no-repeat 0 center;
+  background-size: 17px 13px;
+  padding-left: 25px;
+  color: #999;
+  font-size: 1.2rem;
+}
+.ilikecnt {
+  position: absolute;
+  bottom: 10px;
+  right: 35% !important;
+  background: url(../images/playMain/Message_ic.png) no-repeat 0 center;
+  background-size: 17px 13px;
+  padding-left: 25px;
+  color: #999;
+  font-size: 1.2rem;
+}
+.mediaType {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    line-height: 12px;
+    color: #ed4542;
+    font-size: 1rem;
+    border: 1px solid #ed4542;
+    border-radius: 5px;
+    padding: 2px 5px;
+}

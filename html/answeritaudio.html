@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>大夫说</title>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <script src="../js/bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="../js/jquery-3.0.0.min.js"></script>
+    <script src="../js/bower_components/fastclick/lib/fastclick.js"></script>
+    <script>
+        $(function(){
+            FastClick.attach(document.body);
+        })
+    </script>
+
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/public.css">
+    <link rel="stylesheet" href="../css/answer.css">
+    <script src='../js/bootstrap.min.js'></script>
+    <script src="../js/dfs.js"></script>
+    <script src="../js/get_info.js"></script>
+    <script src="../js/bower_components/plupload/js/plupload.full.min.js"></script>
+    <script src="../js/bower_components/qiniu/dist/qiniu.min.js"></script>
+    <script src="../js/jssdk.js"></script>
+</head>
+<body>
+
+<answeritaudio class="answerit"></answeritaudio>
+<div class="record">
+    <div class="startRecord" onclick="start();">
+        <div></div>
+        <div>最多可录制60秒</div>    
+    </div>
+    <div class="stopRecord" onclick="stop();">停止录音</div>
+    <div class="voiceTime"></div>
+    <div class="playVoice" onclick="playAudio();">播放录音</div>
+    <div class="uploadVoice" onclick="uploadCheckBoxShow();">提交回答</div>
+    <div class="recordConfirm">录制时间太短，请重新录制</div>
+    
+</div>
+
+<div class="uploadCheckBox">
+    <div>
+        <div class='cancle' onclick="cancle();">取消</div>
+        <div class="upload" onclick="upload();">确认</div>
+    </div>
+</div>
+<navlists></navlists>
+
+</body>
+<script>
+
+    var dfs_cookie = jQuery.parseJSON(dfs.getCookie('dfs_token'));
+    var userinfo = jQuery.parseJSON(dfs.getCookie('userinfo'));
+    var questionid = location.href.split("id=")[1].split("&")[0];
+
+    var stopRecord = document.getElementsByClassName("stopRecord")[0];
+    var playVoice = document.getElementsByClassName("playVoice")[0];
+    var uploadVoice = document.getElementsByClassName("uploadVoice")[0];
+
+    var state;
+        
+    var currentUrl = location.href.split('#')[0];
+
+    $.ajax({
+        url: "http://api.daifushuo.com/qn/get_wx_config",
+        async: true,
+        type: "get",
+        dataType: 'json',
+        data:{
+            url: currentUrl
+        },
+        contentType:"application/json;charset=utf-8",
+        success: function(data) {
+            // alert(data.appId);
+            // cc = data;
+            console.log(data); 
+            wx.config({
+                debug: false, 
+                appId: data.appId, 
+                timestamp: data.timestamp, 
+                nonceStr: data.nonceStr, 
+                signature: data.signature,
+                jsApiList: data.jsApiList 
+            });
+            wx.ready(function(){
+                // alert("ok");
+            });
+
+            wx.checkJsApi({
+                jsApiList: ['translateVoice'], // 需要检测的JS接口列表，所有JS接口列表见附录2,
+                success: function(res) {
+                    console.log(res);
+                // 以键值对的形式返回，可用的api值true，不可用为false
+                // 如：{"checkResult":{"chooseImage":true},"errMsg":"checkJsApi:ok"}
+                }
+            });    
+        }
+    });
+    
+    
+
+    var refreshurl;
+    if( !document.referrer ){
+        refreshurl = location.href;
+    }else{
+        refreshurl = document.referrer;
+    };
+    var localId;
+    var times;
+    /*
+    $("#luyin").on("touchstart",function(){
+        
+    });
+    $('#luyin').on('touchend', function(event){
+        
+    });
+    */
+    var t;
+    function start(){
+        event.preventDefault();
+        START = new Date().getTime();
+
+        times = 1;
+        stopRecord.style.display = "block";
+        // uploadVoice.style.display = "block";
+        
+
+        t=setTimeout('startTime()',1000);
+        recordTimer = setTimeout(function(){
+            wx.startRecord({
+                success: function(){
+                    localStorage.rainAllowRecord = 'true';
+                },
+                cancel: function () {
+                    alert('用户拒绝授权录音');
+                }
+            });
+        },300);
+    }
+
+    function stop(){
+        event.preventDefault();
+        window.clearInterval(t);
+        END = new Date().getTime();
+        stopRecord.style.display = "none";
+        
+        if((END - START) < 5000){
+            // alert("时间太短");
+            // let recordConfirm = document.getElementsByClassName("recordConfirm")[0];
+            // recordConfirm.style.display = "block";
+            uploadVoice.style.display = "none";
+            $(".recordConfirm").fadeIn(1500);
+            $(".recordConfirm").fadeOut(1500);
+            END = 0;
+            START = 0;
+            localId = null;
+            //小于300ms，不录音
+            clearTimeout(recordTimer);
+        }else{
+            uploadVoice.style.display = "block";
+            playVoice.style.display = "block";
+            wx.stopRecord({
+                success: function (res) {
+                    localId = res.localId; 
+                },
+                fail: function (res) {
+                    alert(JSON.stringify(res));
+                }
+            });
+        }
+    }
+    function playAudio(){
+        wx.playVoice({
+            localId: localId 
+        });
+    }
+    function uploadVoiceClick(){
+        if(state==true){
+            wx.uploadVoice({
+                localId: localId, 
+                isShowProgressTips: 1, 
+                success: function (res) {
+                    // alert(res.serverId);
+                    $.ajax({
+                        url: 'http://api.daifushuo.com/qn/wx_to_qn_audio',
+                        type: 'get',
+                        data: {"id":res.serverId},
+                        dataType: "json",
+                        success: function (data) {
+                            // alert(data.url);
+                            var voiceTime = document.getElementsByClassName("voiceTime")[0].innerHTML;
+                            var detail={
+                                openid: userinfo.openid,
+                                questionid: questionid,
+                                voice: data.url,
+                                duration: times
+                            };
+                            
+                            $.post("http://api.daifushuo.com:80/api/oquestion/dfs_answer_question?access_token="+dfs_cookie.id,detail,function(data){
+                                // alert(data);
+                                window.location.href = refreshurl;
+                            });
+                                 
+                        },
+                        error: function (xhr, errorType, error) {
+                            console.log(error);
+                        }
+                    });
+                }
+            });
+        }else{
+        }
+        
+    }
+
+    function uploadCheckBoxShow(){
+        $(".uploadCheckBox").show();
+    }
+    
+    function cancle(){
+        $(".uploadCheckBox").hide();
+        return state = false;
+    }
+    
+    function upload(){
+        $(".uploadCheckBox").hide();
+        state = true;
+        uploadVoiceClick();
+    }
+
+    function startTime(){
+        document.getElementsByClassName('voiceTime')[0].innerHTML = times + "s";
+        times++;
+        if(times>60){
+            stopRecord.style.display = "none";
+            uploadVoice.style.display = "block";
+            playVoice.style.display = "block";
+            wx.stopRecord({
+                success: function (res) {
+                    localId = res.localId; 
+                },
+                fail: function (res) {
+                    alert(JSON.stringify(res));
+                }
+            });
+            return ;
+        }else{
+            t=setTimeout('startTime()',1000);
+        }
+        
+    }
+</script>
+<script src="../js/riot+compiler.min.js"></script>
+<script src="../js/riotcontrol.js"></script>
+<script src="../js/store/answerStore.js"></script>
+<script type="riot/tag" src="../js/riot/answeritaudio.tag"></script>
+<script type="riot/tag" src="../js/riot/nav.tag"></script>
+<script type="text/javascript">
+
+    $(function(){
+
+        var  answerStore = new AnswerStore();
+        RiotControl.addStore(answerStore);
+
+        riot.mount("*");
+
+    })
+</script>
+</html>

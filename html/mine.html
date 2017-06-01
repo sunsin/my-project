@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>大夫说</title>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <script src="../js/jquery-3.0.0.min.js"></script>
+    <script src="../js/bower_components/fastclick/lib/fastclick.js"></script>
+    <script>
+        $(function(){
+            FastClick.attach(document.body);
+        })
+    </script>
+    <script src="../js/get_info.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+    <script src='../js/bootstrap.min.js'></script>
+    <script src="../js/dfs.js"></script>
+    <link rel="stylesheet" href="../css/public.css">
+    <link rel="stylesheet" href="../css/mineRevision.css">
+    <script src="../js/bower_components/qrcode.js/qrcode.js"></script>
+    <script src="https://lkme.cc/js/linkedme.min.js"></script>
+    <style>
+        nav .container > div:nth-child(4) a{
+            background: url(../images/version2/icon/wode.png) no-repeat center 5px !important;
+            background-size: 22px 22px !important;
+            color: #ed4542;
+        }
+    </style>
+</head>
+<body>
+    <mine></mine>
+    <navLists></navLists>
+</body>
+<script src="../js/riot+compiler.min.js"></script>
+<script src="../js/riotcontrol.js"></script>
+<script src="../js/store/collectStore.js"></script>
+<script type="riot/tag" src="../js/riot/mine.tag"></script>
+<script type="riot/tag" src="../js/riot/nav.tag"></script>
+<script type="text/javascript">
+
+    $(function(){
+        var collectstore = new CollectStore();
+        RiotControl.addStore(collectstore);
+        riot.mount("*");
+    })
+</script>
+
+</html>

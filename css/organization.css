@@ -1,0 +1,44 @@
+body {
+  background: #f3f3f3;
+}
+.organization {
+  display: block;
+}
+.organization .hospital-title {
+  display: block;
+  overflow: hidden;
+  height: 120px;
+  line-height: 120px;
+}
+.organization .hospital-title img {
+  width: 80px;
+  border-radius: 50%;
+  height: 80px;
+}
+.organization .room {
+  display: block;
+}
+.organization .room h3 {
+  padding: 5px 0 5px 10px;
+  background: #fff;
+  font-size: 1.8rem;
+  color: #434343;
+}
+.organization .room li {
+  padding-left: 10px;
+  list-style: none;
+  line-height: 50px;
+  font-size: 1.4rem;
+  color: #434343;
+  border-bottom: 1px solid #ccc;
+}
+.organization .room li:before {
+  content: "";
+  margin-right: 10px;
+  line-height: 50px;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+}

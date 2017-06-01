@@ -1,0 +1,99 @@
+.hospital-box .video-box {
+  display: block;
+  background: #fff;
+  margin-top: 10px;
+  width: 100%;
+  height: auto;
+}
+.hospital-box .video-box a {
+  position: relative;
+}
+.hospital-box .video-box a img {
+  width: 100%;
+  height: 210px;
+}
+.hospital-box .video-box a .watermark {
+  position: absolute;
+  top: 80px;
+  left: 50%;
+  margin-left: -20px;
+}
+.hospital-box .video-box a .watermark img {
+  width: 40px;
+  height: 40px;
+}
+.hospital-box .video-box a .viewnum {
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+  background: #000;
+  opacity: 0.5;
+  color: #fff;
+  font-size: 1.2rem;
+  padding: 3px 15px;
+  height: 24px;
+  line-height: 20px;
+  border-top-left-radius: 16px;
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
+  border-top-right-radius: 16px;
+}
+.hospital-box .video-box .description1 {
+  overflow: hidden;
+  margin-top: 10px;
+}
+.hospital-box .video-box .description1 .tit {
+  display: inline-block;
+  color: #434343;
+  font-size: 1.6rem;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  line-height: 16px;
+}
+.hospital-box .video-box .description1 span:nth-child(2) {
+  display: block;
+  font-size: 1.6rem;
+  color: #6f6f6f;
+  padding-left: 10px;
+  margin-bottom: 10px;
+}
+.hospital-box .video-box .description2 {
+  padding-bottom: 10px;
+  overflow: hidden;
+}
+.hospital-box .video-box .description2 .addr,
+.hospital-box .video-box .description2 .administrative {
+  font-size: 1.2rem;
+  margin-left: 10px;
+}
+.hospital-box .video-box .description2 .addr {
+  color: #999;
+}
+.hospital-box .video-box .description2 .administrative {
+  color: #e54d42;
+}
+.hospital-box .proficient a {
+  overflow: hidden;
+  border-bottom: 1px solid #ebebeb;
+  margin: 10px;
+}
+.hospital-box .proficient a img {
+  float: left;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  margin: 0px 10px 10px 0;
+}
+.hospital-box .proficient a > div {
+  float: left;
+  margin-top: 10px;
+}
+.hospital-box .proficient a > div .nickname {
+  font-size: 1.4rem;
+  color: #434343;
+}
+.hospital-box .proficient a > div .hospital,
+.hospital-box .proficient a > div .room {
+  font-size: 1.2rem;
+  color: #6f6f6f;
+}

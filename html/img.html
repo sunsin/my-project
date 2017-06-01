@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>大夫说</title>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <script src="../js/jquery-1.11.1.min.js"></script>
+    <script src="../js/bower_components/fastclick/lib/fastclick.js"></script>
+    <script>
+        $(function(){
+            FastClick.attach(document.body);
+        })
+    </script>
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+    <script src='../js/bootstrap.min.js'></script>
+    <script src="../js/dfs.js"></script>
+    <script src="../js/cropbox.js"></script>
+    <link rel="stylesheet" href="../css/public.css">
+    <link rel="stylesheet" href="../css/mine.css">
+</head>
+<body>
+<div class="container">
+    <div class="imageBox">
+        <div class="thumbBox"></div>
+        <div class="spinner" style="display: none">Loading...</div>
+    </div>
+
+    <div class="action">
+        <input type="file" id="file" style="float:left; width: 250px">
+        <input type="button" id="btnCrop" value="确认" style="float: right">
+        <input type="button" id="btnZoomIn" value="+" style="float: right">
+        <input type="button" id="btnZoomOut" value="-" style="float: right">
+    </div>
+
+    <div class="cropped"></div>
+    <button id="affirm" style="position: absolute;bottom: 20px;left: 50%;margin-left: -60px;width: 120px;height: 35px;line-height: 35px;background: #ed4542;color: #fff;font-size: 1.4rem;text-align: center;">确认上传头像</button>
+
+</div>
+
+</body>
+<script type="text/javascript">
+    $(window).load(function() {
+        var options =
+        {
+            thumbBox: '.thumbBox',
+            spinner: '.spinner',
+            imgSrc: 'images/avatar.png'
+        }
+        var cropper = $('.imageBox').cropbox(options);
+        $('#file').on('change', function(){
+            $(".imageBox").show();
+            var reader = new FileReader();
+            reader.onload = function(e) {
+                options.imgSrc = e.target.result;
+                cropper = $('.imageBox').cropbox(options);
+            }
+            reader.readAsDataURL(this.files[0]);
+            //this.files = [];
+        })
+        $('#btnCrop').on('click', function(){
+            $(".imageBox").hide();
+            var img = cropper.getDataURL();
+            $('.cropped').append('<img src="'+img+'">');
+        })
+        $('#btnZoomIn').on('click', function(){
+        		cropper.zoomIn();
+        	})
+        	$('#btnZoomOut').on('click', function(){
+        		cropper.zoomOut();
+        	})
+    });
+    $(function(){
+        var dfs_cookie = jQuery.parseJSON($.cookie('dfs_token'));
+        //console.log(dfs_cookie);
+        var userid = dfs_cookie.userId;
+        var accessToken = dfs_cookie.id;
+        var imgPath = $(".cropped").find("img").attr("src");
+        //console.log(imgPath);
+
+        var getPersonalMessagePost = dfs.apiUserUrl + "/" + userid+"?access_token="+accessToken
+        $("#affirm").click(function(){
+          console.log("fs");
+            var personalMessagePost = {
+                avatar: "["+ imgPath+"]"
+            }
+            $.get(getPersonalMessagePost,personalMessagePost,function(){
+                console.log("yes");
+            })
+        })
+
+
+    })
+</script>
+<script src="../js/get_info.js"></script>
+</html>

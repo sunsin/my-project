@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>大夫说</title>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <script src="../js/bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="../js/bower_components/fastclick/lib/fastclick.js"></script>
+    <script>
+        $(function(){
+            FastClick.attach(document.body);
+        })
+    </script>
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/public.css">
+    <link rel="stylesheet" href="../css/hospital.css">
+    <link rel="stylesheet" href="../js/bower_components/video.js/dist/video-js.min.css" type="text/css">
+    <script src='../js/bootstrap.min.js'></script>
+    <script src="../js/bower_components/video.js/dist/video.min.js"></script>
+    <script src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+    <script src="../js/get_info.js"></script>
+    <script src="../js/dfs.js"></script>
+</head>
+<body>
+<hospital></hospital>
+</body>
+<script src="../js/riot+compiler.min.js"></script>
+<script src="../js/riotcontrol.js"></script>
+<script src="../js/store/hospitalStore.js"></script>
+<script type="riot/tag" src="../js/riot/hospital.tag"></script>
+<script type="text/javascript">
+    $(function(){
+        var  hospitalStore = new HospitalStore();
+        RiotControl.addStore(hospitalStore);
+        riot.mount("*");
+
+    })
+
+</script>
+
+</html>

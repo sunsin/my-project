@@ -1,0 +1,370 @@
+@bodybg: #f3f3f3;
+@fz-one: #434343;
+@fz-two: #6f6f6f;
+@red: #e54d42;
+@border-radius: 5px;
+@border-color: #ccc;
+body{
+  background: #f3f3f3;
+}
+.forword{
+  margin-bottom: 0 !important;
+}
+.erweima{
+  position: absolute;
+  top: 80px;
+  right: 30px;
+  z-index: 1;
+  width: 50px;
+  text-align: center;
+  img{
+    border-radius: 0;
+    width: 24px;
+    height: 24px;
+  }
+  div{
+    margin-top: 5px;
+    font-size: 10px;
+    color: #999;
+  }
+}
+.erweima-img{
+  background:rgba(0,0,0,0.5);
+  width: 100%;
+  height: 1000px;
+  display: none;
+  .qr{
+    position: absolute;
+    z-index: 1;
+    top: 170px;
+    width: 100%;
+    text-align: center;
+    #qrcode{
+      background: #fff;
+      width: 80%;
+      margin: 0 auto;
+      height: 260px;
+      line-height: 260px;
+      img{
+        display: inline !important;
+        vertical-align: middle;
+      }
+    }
+    >div{
+      background: #fff;
+      width: 80%;
+      margin: 0 auto;
+      border: none;
+      padding: 10px 0;
+    }
+  }
+}
+
+.headMag{
+    position: relative;
+    padding: 25px 0 0px 0;
+    background: #fff;
+    border-top: 1px solid #ddd;
+	border-bottom: 10px solid #f3f3f3;
+    text-align: center;
+    //display: none;
+    &:nth-child(1){
+        display: block;
+    }
+    img{
+        width: 75px;
+        height: 75px;
+        border-radius: 50%;
+    }
+    div span{
+        line-height: 20px;
+        color: #6f6f6f;
+        font-size: 1.2rem;
+    }
+    .msg{
+      //padding-left: 20px;
+      padding-top: 10px;
+      overflow: hidden;
+      >div{
+        padding: 0;
+        margin: 0;
+        &:nth-child(1){
+          text-align: right;
+          //padding-right: 5px;
+          //border-right: 1px solid #434343;
+        }
+        &:nth-child(2){
+          text-align: left;
+          padding-left: 5px;
+        }
+      }
+    }
+    .name{
+        margin-top: 10px;
+        color: #434343;
+        font-size: 1.4rem;
+    }
+    .professionalitle{
+        color: #3f3f3f;
+    }
+
+  .description2{
+    overflow: hidden;
+    span{
+
+    }
+  }
+}
+.description2{
+  color: #45b2ff;
+  font-size: 1.2rem;
+  overflow: hidden;
+  padding-top: 10px;
+  .hospital-img{
+    img{
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+    }
+  }
+  .addr{
+    //margin: 0 10px;
+    margin: 0 !important;
+    a{
+      display: inline;
+      color: #75b6ff;
+      font-size: 1.2rem;
+        &:nth-child(1){
+           padding-right: 5px;
+        }
+        &:nth-child(2){
+            padding-left: 5px;
+        }
+    }
+  }
+  >div{
+    &:nth-child(1){
+      text-align: center;
+      padding-right: 5px;
+
+    }
+    &:nth-child(2){
+      text-align: center;
+      padding-left: 5px;
+    }
+  }
+
+}
+.focus{
+    width: 30%;
+	margin: 15px auto;
+    text-align: center;
+    span{
+        padding: 10px 25px;
+        background: @red;
+        color: #fff !important;
+        font-size: 1.4rem;
+        border-radius: 5px;
+        line-height: 60px;
+    }
+}
+.change{
+    background: #ebebeb !important;
+}
+/**/
+.inDesc{
+    //line-height: 35px;
+    color: #434343;
+    margin-top: 10px;
+    font-size: 1.4rem;
+    background: #f3f3f3;
+    >div >div{
+        &:nth-child(2){
+            padding-left: 10px;
+            font-size: 1.2rem;
+            line-height: 20px;
+            margin-top: 10px;
+            padding-bottom: 10px;
+        }
+    }
+    .adept{
+        >div{
+            &:nth-child(1){
+                padding: 9px 0 7px 30px;
+                font-size: 1.4rem;
+                background: #fff url(../images/doctor/ic-doctor-field.png) no-repeat 10px center;
+                background-size: 17px 17px;
+            }
+        }
+    }
+    .experience{
+        >div{
+            &:nth-child(1){
+                padding: 9px 0 7px 30px;
+                font-size: 1.4rem;
+                background: #fff url(../images/doctor/ic-doctor-experience.png) no-repeat 10px center;
+                background-size: 17px 17px;
+            }
+        }
+    }
+}
+.authentication,.hotVideo .tit,.moreVideo .tit,.videoList .tit{
+  padding: 9px 0 7px 30px;
+  //height: 35px;
+  //line-height: 35px;
+  color: #434343;
+  //margin-top: 10px;
+  font-size: 1.4rem;
+}
+.inDesc,.authentication{
+  /*border-bottom: 10px solid #f3f3f3;*/
+    border-top: 10px solid #f3f3f3;
+    text-align: left;
+}
+.doctorInformation{
+  padding: 15px 10px;
+  font-size: 1.2rem;
+}
+.authentication{
+  display: block;
+  background: #fff url(../images/doctor/Man.png) no-repeat 10px center;
+  background-size: 15px 15px;
+}
+.hotVideo .tit{
+  background: #fff url(../images/doctor/Hot_ic.png) no-repeat 10px center;
+  background-size: 15px 15px;
+}
+.hotlist{
+  a{
+    background: #fff;
+    .hotVideoList{
+      overflow: hidden;
+      //margin-top: 10px;
+      border-top: 1px solid #eee;
+      > div{
+        padding: 0;
+        height: 140px;
+        &:nth-child(1){
+          padding-top: 10px;
+          position: relative;
+          .viewNum{
+
+          }
+          .ilikecnt{
+
+          }
+        }
+        &:nth-child(2){
+          position: relative;
+          padding: 10px;
+        }
+      }
+    }
+  }
+}
+.hot-video-img,.more-video-img{
+  width: 100%;
+  height: 120px;
+}
+.watermark{
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  margin-left: -20px;
+  img{
+    width: 40px;
+    height: 40px;
+  }
+}
+.hotVideoTit{
+  margin-top: 10px;
+  font-size: 1.4rem;
+  color: #434343;
+}
+.hotVideoTxt{
+  margin-top: 10px;
+  font-size: 1.2rem;
+  color: #6f6f6f;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+
+}
+
+.hotList{
+  padding: 0 10px !important;
+}
+.moreVideo{
+  background: #fff;
+  padding-bottom: 25px;
+}
+.moreVideo .tit,.videoList .tit{
+  background: #fff;
+  margin-bottom: 10px;
+  padding-left: 10px;
+
+}
+.videoList .tit{
+  padding: 9px 0 7px 30px;
+  margin-bottom: 0;
+  border-bottom: 1px solid #eee;
+  background: #fff url(../images/icon/10.pic.jpg) no-repeat 10px center;
+  background-size: 17px 17px;
+}
+
+.moreVideoList{
+  margin: 0 10px;
+    a{
+        box-sizing: border-box;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        font-size: 1rem;
+        margin-right: 5px;
+        padding: 0 5px;
+        display: inline-block;
+        height: 35px;
+        line-height: 35px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        &:nth-child(1){
+            background: #ccc;
+            color: #fff;
+            width: 41%;
+        }
+        &:nth-child(2){
+            background: #fff;
+            color: #ccc;
+            width: 41%;
+        }
+        &:last-child{
+          border: none;
+          font-size: 2rem;
+          color: #ccc;
+        }
+    }
+}
+.videoList{
+  display: block;
+  margin-bottom: 20px;
+  padding-bottom: 30px;
+    >a{
+        background: #f3f3f3;
+        text-align: center;
+        color: #666;
+        font-size: 1.4rem;
+        padding: 8px 0;
+    }
+}
+
+.hospitalDefault,.roomDefault{
+    margin: 0 auto;
+    width: 60%;
+    height: 50px;
+    line-height: 50px;
+    color: #6f6f6f;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+
+}

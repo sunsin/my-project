@@ -1,0 +1,116 @@
+.top{
+    overflow: hidden;
+    background: #fff;
+    font-size: 1.2rem;
+    text-align: center;
+    line-height: 35px;
+    color: #434343;
+}
+.top img{
+    width: 16px;
+    height: 16px;
+}
+.top .back{
+    background: #f3f3f3;
+    padding: 5px 0;
+    color: #434343;
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 10px;
+}
+nav .channel{
+    background: url(../images/icon/channel.png) no-repeat center 5px !important;
+    background-size: 22px 23px !important;
+}
+.search{
+    display: block;
+    margin: 10px;
+    background: #ebebeb;
+    border: 1px solid #f3f3f3;
+    border-radius: 5px;
+
+}
+.search {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    margin: 5px 10px;
+    border: 1px solid #f3f3f3;
+    border-radius: 5px;
+}
+
+.search span{
+    display: inline-block;
+    height: 32px;
+    line-height: 32px;
+    color: #434343;
+    font-size: 1.2rem;
+    margin: 0 auto;
+    border-radius: 5px;
+    border: 1px solid #fff;
+    padding: 0 10px;
+}
+.search span:nth-child(1){
+     width: 90%;
+     background: #fff;
+ }
+.search span:nth-child(2){
+    position: absolute;
+    right: 0px;
+    border: 1px solid #e54d42;
+    border-radius: 5px;
+     width: 15%;
+     background: #e54d42 url(../images/icon/5.pic.jpg) no-repeat center center;
+     background-size: 17px 17px;
+ }
+
+.content{
+    overflow: hidden;
+    font-size: 1.4rem;
+    color: #434343;
+}
+.container{
+    padding: 0;
+    height: 100%;
+}
+.listDisease{
+    float: left;
+    width: 40%;
+}
+.left{
+    background: #ccc;
+    text-align: center;
+    line-height: 45px;
+    font-size: 1.6rem;
+}
+.detail{
+    float: left;
+    width: 60%;
+}
+.right{
+    display: none;
+    text-align: center;
+    padding: 0;
+}
+.right:nth-child(1){
+    display: block;
+}
+.right a{
+    display: block;
+    border: none;
+    height: 45px;
+    line-height: 45px;
+    border-bottom: 1px solid #ccc;
+    color: #434343;
+    font-size: 1.4rem;
+    padding: 5px 0;
+}
+html,body{
+    height: 100%;
+}
+ul,li{
+    list-style: none;
+}
+.wirte{
+    background: #fff !important;
+}

@@ -1,0 +1,32 @@
+.report .title {
+  background: #f3f3f3;
+  color: #434343;
+  font-size: 1.5rem;
+  padding: 15px 10px;
+  text-align: left;
+}
+.report .report-reason-box {
+  padding-left: 10px;
+}
+.report .report-reason-box .report-reason-item {
+  padding: 15px 30px;
+  background: url(../images/icon/select_grey.png) no-repeat 0 center;
+  background-size: 15px 15px;
+  color: #434343;
+  font-size: 1.8rem;
+}
+.report .submit {
+  width: 80%;
+  margin: 30px auto 0 auto;
+  height: 50px;
+  line-height: 50px;
+  background: #ed4542;
+  color: #fff;
+  font-size: 2rem;
+  text-align: center;
+  border-radius: 5px;
+}
+.report-select {
+  background: url(../images/icon/select_red.png) no-repeat 0 center !important;
+  background-size: 15px 15px !important;
+}

@@ -1,0 +1,376 @@
+@mainColor: #e54d42;
+@titleColor: #333;
+@txtColor: #999;
+ul,li{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+.text{
+	overflow:hidden; 
+	text-overflow:ellipsis; 
+	white-space:nowrap;
+}
+.titleTxt{
+	color: @titleColor;
+	font-size: 1.4rem;
+}
+.contentTxt{
+	color: @txtColor;
+	font-size: 1.2rem;
+}
+.1line{
+	display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    word-break: break-all;
+    overflow: hidden;
+}
+.2line{
+	display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    word-break: break-all;
+    overflow: hidden;
+}
+.boxShadow{
+	box-shadow: 0 0 10px @mainColor;
+}
+.wechat{
+	overflow: hidden;
+	display: block;
+	padding-bottom: 70px;
+	.search{
+		overflow: hidden;
+		display: table;
+		padding-left: 40px;
+		width: 100%;
+		height: 45px;
+		background: @mainColor;
+		>div{
+			// float: left;
+			display: table-cell;
+			vertical-align: middle;
+			&:nth-child(1){
+				width: 80%;
+				text-align: center;
+				img{
+					width: 80px;
+					height: 25px;
+				}
+			}
+			&:nth-child(2){
+				width: 20%;
+				background: url(../images/version2/search.png) no-repeat center center;
+				background-size: 30px 30px;
+				img{
+					width: 22px;
+					height: 22px;
+				}
+			}
+		}
+	}
+	.disease{
+		width: 100%;
+    	padding: 25px 0;
+    	a{
+    		display: block;
+    		height: 44px;
+    		width: 46%;
+    		margin: 0 auto;
+    		padding-left: 40px;
+    		line-height: 44px;
+    		text-align: center;	
+    		border: 1px solid @mainColor;
+    		border-radius: 10px;
+    		background: @mainColor url(../images/version2/icon/icon_ill_search.png) no-repeat 40px center;
+    		background-size: 25px 25px;
+    		color: #fff;
+    		font-size: 1.6rem;	
+    	}
+	}
+	.wechatTab{
+		overflow: hidden;
+		display: block;
+		padding: 0 10px 25px;
+	}
+	.topicTab{
+		overflow: hidden;
+		position: relative;
+		padding: 15px 0 15px 0;
+		line-height: 30px;
+		border-top: 5px solid #fbfbfb;
+		span{
+			float: left;
+			padding-left: 10px;
+			font-size: 1.2rem;
+			color: @titleColor;
+		}
+		a{
+			display: inline-block;
+			float: right;
+			padding-right: 10px;
+			font-size: 1.2rem;
+			color: @txtColor;
+		}
+	}
+	.topicTab:before{
+		content: "";
+		display: block;
+		width: 5px;
+		height: 15px;
+		background: @mainColor;
+		position: absolute;
+		top: 22px;
+	}
+	.health-item{
+		overflow: hidden;
+		position: relative;
+		float: left;
+		width: 50%;
+	    box-sizing: border-box;
+	    
+	    &:nth-child(even){
+	    	padding: 10px 5px 5px 10px;
+	    }
+	    &:nth-child(odd){
+	    	padding: 10px 10px 5px 5px;
+	    }
+	  
+	    .cover{
+	    	
+			img{
+				width: 100%;
+				height: 100px;
+				border-radius: 10px;
+				box-shadow: 0 0 10px @mainColor;
+			}
+			.bg{
+				position: absolute;
+				top: 10px;
+				background: rgba(0,0,0,0.3);
+				width: 91.4%;
+				height: 100px;
+				border-radius: 10px;
+			}
+		}
+		.title{
+			position: absolute;
+			width: 40%;
+			color: #fff;
+			background: rgba(0,0,0,0);
+			top: 13%;
+			left: 11%;
+			text-align: center;
+		}
+	}
+
+	.hot-item,.recommend-item{
+		display: block;
+		float: left;
+		width: 50%;
+		.videoDetail{
+			overflow: hidden;
+			&:nth-child(even){
+	    		padding: 0 10px 0 0;
+		    }
+		    &:nth-child(odd){
+		    	padding: 0 0 0 10px;
+		    }
+			.videoInfo{
+				margin-top: 10px;
+				.videoTitle{
+					margin-bottom: 10px;
+					padding-right: 10px;
+					.1line();
+					.titleTxt();
+				}
+				.videoTxt{
+					padding-right: 10px;
+					.1line();
+					.contentTxt();
+				}
+				.videoData{
+					overflow: hidden;
+					margin-bottom: 10px;
+					width: 100%;
+					>div{
+						padding-left: 23px;
+						color: @txtColor;
+						font-size: 1rem;
+					}
+					.comment{
+						background: url(../images/version2/icon/like.png) no-repeat 0 center;
+						background-size: 15px 15px;
+					}
+					.views{
+						background: url(../images/version2/icon/see.png) no-repeat 0 center;
+						background-size: 23px 23px;
+					}
+				}
+			}
+			.videoVcover{
+				position: relative;
+				// width: 35%;
+				>img{
+					width: 100%;
+					height: 95px;
+					border-radius: 10px;
+				}
+				.watermark{
+					position: absolute;
+					top: 32.5px;
+					left: 50%;
+					margin-left: -15px;
+					img{
+						width: 30px;
+						height: 30px;
+					}
+				}
+			}
+			.videoData{
+				>div{
+					padding: 0;
+					margin: 0;
+				}
+			}
+		}
+	
+	}
+
+	.doctor-item{
+		//float: left;
+		//width: 25%;
+		display: block;
+		box-sizing: border-box;
+		padding-bottom: 5px;
+		.doctor-avatar{
+			img{
+				//width: 100%;
+				margin: 0 auto;
+				border-radius: 50%;
+				//padding: 0 15px 7px 15px;
+			}
+		}
+		div{
+			text-align: center;
+			font-size: 1.2rem;
+			color: #999;
+			line-height: 20px;
+			.text();
+		}
+		.nick{
+			font-size: 1.4rem;
+			color: #434343;
+		}
+		.minh{
+			height: 18px;
+		}
+	}
+
+	.index_tab{
+		ul{
+			overflow: hidden;
+			li{
+				float: left;
+				width: 50%;
+				text-align: center;
+				a{
+					div{
+						margin: 0 27.5px 0 25px;
+						border: 1px solid @mainColor;
+						border-radius: 10px;
+						color: @mainColor;
+						height: 44px;
+						line-height: 44px;
+					}
+					div:hover{
+						margin: 0 25px 0 27.5px;
+						border-radius: 10px;
+						color: #fafafa;
+						background: @mainColor;
+						height: 44px;
+						line-height: 44px;
+					}
+					
+				}
+			}
+		}
+	}
+
+}
+
+.doctorList{
+	ul{
+		margin: 0;
+		padding: 0;
+		white-space: nowrap;
+	    //overflow-x: auto;
+	    overflow-y: inherit;
+		li{
+			list-style: none;
+			display: inline-block;
+			width: 22%;
+			padding: 0 10px;
+			img{
+				width: 100%;
+			}
+		}
+	}
+}
+
+.recommend{
+	ul{
+		padding: 0;
+		margin: 0;
+		li{
+			list-style: none;
+			&:nth-child(1){
+				.recommend-item{
+					width: 100%;
+					padding: 0 10px 5px 10px !important;
+					.videoVcover>img{
+						height: 180px !important;
+					}
+					.watermark{
+						top: 75px !important;
+					}
+				}
+			}
+			&:nth-child(even){
+				.recommend-item{
+					padding: 0 5px 5px 10px;
+				}
+		    	
+		    }
+		    &:nth-child(odd){
+		    	.recommend-item{
+		    		padding: 0 10px 5px 3px;
+		    	}
+		    	
+		    }
+		}
+	}
+}
+
+.carousel {
+  	display: block;
+  	.item img {
+  		width: 100%;
+  		height: 200px !important;
+	}
+	.carousel-indicators {
+  		bottom: 50px;
+  		right: 10px;
+  		margin: 0;
+	}
+	.carousel-caption{
+		width: 100%;
+		background: rgba(0,0,0,0.5);
+		color: #fff;
+		padding: 10px 0 10px 10px;
+		left: 0;
+		bottom: 0;
+		text-align: left;
+	}
+}

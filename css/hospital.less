@@ -1,0 +1,286 @@
+@bodybg: #f3f3f3;
+@fz-one: #434343;
+@fz-two: #6f6f6f;
+@red: #e54d42;
+.nav-tabs{
+	padding: 10px 0;
+	li{
+		text-align: center;
+		&:nth-child(1){
+			border-right: 1px solid #f3f3f3;
+		}
+		a{
+			color: #434343;
+			padding: 0;
+		}
+	}
+	li.active{
+		a{
+			color: @red !important;
+			border: 0 !important;
+			&:nth-child(even){
+				 border-right: 1px solid #333;
+			}
+		}
+
+	}
+}
+.hospital-message{
+	overflow: hidden;
+	box-sizing: content-box;
+	display: block;
+	border-bottom: 10px solid @bodybg;
+	.part1{
+		>div{
+			float: left;
+			text-align: center;
+		}
+
+	}
+	.hos-img{
+		width: 30%;
+		line-height: 130px;
+		img{
+			width: 75px;
+			height: 75px;
+			border-radius: 50%;
+		}
+	}
+	.hos-description{
+		display: table;
+		width: 70%;
+		height: 130px;
+		>div{
+			display: table-cell;
+			vertical-align: middle;
+		}
+		.hos-name{
+			color: @fz-one;
+			font-size: 2rem;
+		}
+		.hos-level{
+			color: #6f6f6f;
+			font-size: 1.5rem;
+		}
+	}
+	.link-detail{
+		color: #6f6f6f;
+		font-size: 1.5rem;
+		>span{
+			padding: 10px 7px;
+		}
+		>div{
+			padding: 10px;
+			//text-overflow: ellipsis;
+			//display: -webkit-box;
+			//-webkit-line-clamp: 3;
+			//-webkit-box-orient: vertical;
+		}
+
+	}
+}
+/////////hospital room
+.hospital-box{
+	.hospital-title{
+		padding-left: 10px;
+		height: 35px;
+		line-height: 35px;
+		color: @fz-one;
+		font-size: 1.8rem;
+		border-bottom: 1px solid #f3f3f3;
+	}
+	.hospital-room{
+		.hospital-room-item{
+			display: block;
+			height: 50px;
+			line-height: 50px;
+			.item{
+				padding-left: 10px;
+				color: @fz-one;
+				font-size: 1.5rem;
+				>div{
+					float: left;
+					&:nth-child(1){
+						width: 17%;
+					}
+					&:nth-child(2){
+						width: 83%;
+						border-bottom: 1px solid #f3f3f3;
+					}
+				}
+				img{
+					width: 40px;
+					height: 40px;
+					border-radius: 50%;
+				}
+			}
+		}
+	}
+}
+
+
+//////room///////
+	//video part
+#home{
+	margin-bottom: 50px;
+}
+.video-box{
+	display: block;
+	background: #fff;
+	margin-bottom: 50px;
+	.list{
+		display: block;
+		&:last-child{
+			margin-bottom: 50px;
+		}
+	}
+	.list-group{
+		overflow: hidden;
+		margin-bottom: 0;
+		.list-group-item{
+			overflow: hidden;
+			position: relative;
+			border: none;
+			border-bottom: 10px solid #ebebeb;
+			padding: 0;
+			>a{
+				>div{
+					&:nth-child(1){
+						position: relative;
+						height: 140px;
+					}
+				}
+			}
+			> div{
+				padding: 10px;
+				&:nth-child(1){
+					padding-top: 10px;
+					position: relative;
+					height: 140px;
+				}
+			}
+			.videoMessage{
+				position: absolute;
+				bottom: 10px;
+				right: 10px;
+				color: #ccc;
+			}
+			.fr1{
+				padding-left: 25px;
+				margin-right: 5px;
+				background: url(../images/playMain/Message_ic.png) no-repeat 0 center;
+				background-size: 17px 13px;
+			}
+			.fr2{
+				padding-left: 25px;
+				background: url(../images/playMain/Eye_ic.png) no-repeat 0 center;
+				background-size: 17px 13px;
+			}
+			//更多视频图片高度
+			.more-video-img{
+				height: 120px;
+			}
+			> a > div:nth-child(2){
+				padding: 10px;
+				color: #6f6f6f;
+			}
+			img{
+				width: 100%;
+			}
+			span.watermark{
+				position: absolute;
+				top: 50px;
+				left: 50%;
+				margin-left: -20px;
+				img{
+					width: 40px;
+					height: 40px;
+				}
+			}
+			.listTitle{
+				font-size: 1.4rem;
+				color: #434343;
+				/*
+				overflow: hidden;
+				white-space: nowrap;
+				text-overflow: ellipsis;
+				*/
+				//line-height: 23px;
+			}
+			.listTxt{
+				margin-top: 10px;
+				font-size: 1.2rem;
+				color: #6f6f6f;
+				overflow: hidden;
+				white-space: nowrap;
+				text-overflow: ellipsis;
+				//line-height: 20px;
+			}
+		}
+	}
+	.viewNum{
+		//float: right;
+		position: absolute;
+		bottom: 10px;
+		right: 10px;
+		background: url(../images/doctor/Eye_ic.png) no-repeat 0 center;
+		background-size: 17px 13px;
+		padding-left: 25px;
+		color: #999;
+		font-size: 1.2rem;
+	}
+	.ilikecnt{
+		//float: right;
+		position: absolute;
+		bottom: 10px;
+		right: 60px;
+		background: url(../images/playMain/Message_ic.png) no-repeat 0 center;
+		background-size: 17px 13px;
+		padding-left: 25px;
+		color: #999;
+		font-size: 1.2rem;
+	}
+	.mediaType{
+		position: absolute;
+		bottom: 10px;
+		left: 10px;
+		line-height: 12px;
+		color: #ed4542;
+		font-size: 1rem;
+		border: 1px solid #ed4542;
+		border-radius: 5px;
+		padding: 2px 5px;
+	}
+}
+.proficient{
+	padding-left: 10px;
+	color: @fz-one;
+	font-size: 1.5rem;
+	>a{
+		>div{
+			float: left;
+			&:nth-child(1){
+				width: 20%;
+				padding-left: 10px;
+				img{
+					width: 40px;
+					height: 40px;
+					border-radius: 50%;
+				}
+			}
+			&:nth-child(2){
+				width: 80%;
+				border-bottom: 1px solid #f3f3f3;
+				padding-bottom: 3px;
+				.nickname{
+					color: @fz-one;
+					font-size: 1.6rem;
+				}
+				.line2{
+					color: @fz-two;
+					font-size: 1.4rem;
+				}
+			}
+		}
+	}
+}

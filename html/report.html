@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>大夫说</title>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <script src="../js/bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="../js/bower_components/fastclick/lib/fastclick.js"></script>
+    <script>
+        $(function(){
+            FastClick.attach(document.body);
+        })
+    </script>
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+    <script src='../js/bootstrap.min.js'></script>
+    <link rel="stylesheet" href="../css/public.css">
+    <link rel="stylesheet" href="../css/report.css">
+    <script src="../js/dfs.js"></script>
+    <!--<script src="../js/get_info.js"></script>-->
+</head>
+<body>
+
+<report></report>
+
+</body>
+<script src="../js/get_info.js"></script>
+<script src="../js/riot+compiler.min.js"></script>
+<script src="../js/riotcontrol.js"></script>
+<script src="../js/store/videoListStore.js"></script>
+<script type="riot/tag" src="../js/riot/report.tag"></script>
+<script type="text/javascript">
+
+    $(function(){
+        var vstore = new VideoListStore();
+        RiotControl.addStore(vstore);
+        riot.mount("*");
+
+    })
+
+</script>
+
+</html>

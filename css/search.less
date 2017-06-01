@@ -1,0 +1,280 @@
+@bodybg: #f3f3f3;
+@fz-one: #434343;
+@fz-two: #6f6f6f;
+@red: #e54d42;
+@border-radius: 5px;
+@border-color: #ccc;
+
+.search{
+  display: block;
+  margin: 10px 0 0 0  ;
+  .forword{
+    margin-bottom: 10px;
+  }
+  >div{
+    overflow: hidden;
+    background: #ebebeb;
+    padding: 10px;
+    input,button{
+      float: left;
+      display: block;
+      border: 1px solid @bodybg;
+      padding: 5px 10px;
+      font-size: 1.4rem;
+      color: @fz-one;
+
+    }
+    input{
+      width: 65%;
+      border-right: none;
+      border-top-left-radius: 5px;
+      border-bottom-left-radius: 5px;
+    }
+    button{
+	  height: 32px;
+      border-color: @red;
+      border-left: none;
+      border-radius: 5px;
+      width: 15%;
+      background: @red url(../images/icon/5.pic.jpg) no-repeat center center;
+      background-size: 17px 17px;
+    }
+  }
+  .search-box{
+      display: block;
+      margin-top: 20px;
+      >div{
+		  position: relative;
+          background: #ebebeb;
+          font-size: 1.4rem;
+          line-height: 35px;
+          color: #6f6f6f;
+      }
+      ul{
+          li{
+              list-style: none;
+          }
+      }
+  }
+  .search-doctor-box{
+      a{
+          overflow: hidden;
+          >img{
+              float: left;
+              width: 55px;
+              height: 55px;
+          }
+          >div{
+              float: left;
+              >div{
+                  font-size: 1.6rem;
+                  color: @fz-one;
+                  line-height: 20px;
+              }
+              span{
+                  font-size: 1.2rem;
+                  color: @fz-two;
+                  line-height: 20px;
+              }
+          }
+
+      }
+  }
+}
+.search-del{
+	display: none;
+	position: absolute;
+	right: 23%;
+	top: 15px;
+	img{
+		width: 20px;
+		height: 20px;
+	}
+}
+input:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+  color: @fz-one;
+}
+
+input::-moz-placeholder { /* Mozilla Firefox 19+ */
+  color: @fz-one;
+}
+
+input:-ms-input-placeholder,textarea:-ms-input-placeholder {
+  color: @fz-one;
+}
+input::-webkit-input-placeholder,textarea::-webkit-input-placeholder {
+  color: @fz-one;
+}
+.doctorSearch,.videoSearch{
+	background: #fafafa;
+	font-size: 1.4rem;
+	line-height: 35px;
+	color: #6f6f6f;
+	padding-left: 10px;
+	margin-bottom: 5px;
+}
+.more-doctor,.more-video{
+	background: #ebebeb;
+	margin: 0 !important;
+	padding: 10px 0;
+	text-align: center;
+	color: @fz-one;
+	font-size: 1.4rem;
+}
+.doctor-search-box{
+	display: block;
+	background: #fff;
+	a{
+		overflow: hidden;
+		border-bottom: 1px solid #ebebeb;
+		margin-left: 10px;
+		padding-top: 10px;
+		img{
+			float: left;
+			width: 55px;
+			height: 55px;
+			border-radius: 50%;
+			margin: 0px 10px 10px 0;
+		}
+		>div{
+			float: left;
+			margin-top: 10px;
+			.nickname{
+				font-size: 1.4rem;
+				color: @fz-one;
+			}
+			.hospital,.room{
+				font-size: 1.2rem;
+				color: @fz-two;
+			}
+		}
+	}
+}
+.search-result,.video-search{
+	display: block;
+	background: #fff;
+	margin-bottom: 50px;
+  .list{
+    display: block;
+    &:last-child{
+      margin-bottom: 50px;
+    }
+  }
+  .list-group{
+    overflow: hidden;
+    margin-bottom: 0;
+    .list-group-item{
+      overflow: hidden;
+      position: relative;
+      border: none;
+      border-bottom: 10px solid #ebebeb;
+      padding: 0;
+		>a{
+			>div{
+				&:nth-child(1){
+					position: relative;
+					height: 140px;
+				}
+			}
+		}
+      > div{
+        padding: 10px;
+        &:nth-child(1){
+          padding-top: 10px;
+          position: relative;
+          height: 140px;
+        }
+      }
+      .videoMessage{
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+        color: #ccc;
+      }
+      .fr1{
+        padding-left: 25px;
+        margin-right: 5px;
+        background: url(../images/playMain/Message_ic.png) no-repeat 0 center;
+        background-size: 17px 13px;
+      }
+      .fr2{
+        padding-left: 25px;
+        background: url(../images/playMain/Eye_ic.png) no-repeat 0 center;
+        background-size: 17px 13px;
+      }
+      //更多视频图片高度
+      .more-video-img{
+        height: 120px;
+      }
+      > a > div:nth-child(2){
+        padding: 10px;
+        color: #6f6f6f;
+      }
+      img{
+        width: 100%;
+      }
+      span.watermark{
+        position: absolute;
+        top: 50px;
+        left: 50%;
+        margin-left: -20px;
+        img{
+          width: 40px;
+          height: 40px;
+        }
+      }
+      .listTitle{
+        font-size: 1.4rem;
+        color: #434343;
+        /*
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		*/
+        //line-height: 23px;
+      }
+      .listTxt{
+        margin-top: 10px;
+        font-size: 1.2rem;
+        color: #6f6f6f;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        //line-height: 20px;
+      }
+    }
+  }
+  .viewNum{
+    //float: right;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background: url(../images/doctor/Eye_ic.png) no-repeat 0 center;
+    background-size: 17px 13px;
+    padding-left: 25px;
+    color: #999;
+    font-size: 1.2rem;
+  }
+  .ilikecnt{
+    //float: right;
+		position: absolute;
+		bottom: 10px;
+		right: 60px;
+		background: url(../images/playMain/Message_ic.png) no-repeat 0 center;
+		background-size: 17px 13px;
+		padding-left: 25px;
+		color: #999;
+		font-size: 1.2rem;
+  }
+  .mediaType{
+		position: absolute;
+		bottom: 10px;
+		left: 10px;
+	  	line-height: 12px;
+		color: #ed4542;
+		font-size: 1rem;
+		border: 1px solid #ed4542;
+		border-radius: 5px;
+		padding: 2px 5px;
+  }
+}

@@ -1,0 +1,132 @@
+body{
+	background: #f3f3f3;
+}
+.nodata{
+	display: table;
+	width: 100%;
+	color: #999;
+	font-size: 1.6rem;
+	background: #f3f3f3;
+}
+.nodata div{
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+}
+.list-group{
+	overflow: hidden;
+	margin-bottom: 0;
+	.list-group-item{
+		overflow: hidden;
+		position: relative;
+		border: none;
+		border-bottom: 10px solid #ebebeb;
+		padding: 0;
+		>a{
+			>div{
+				&:nth-child(1){
+					position: relative;
+					height: 140px;
+				}
+			}
+		}
+		> div{
+			padding: 10px;
+			&:nth-child(1){
+				padding-top: 10px;
+				position: relative;
+				height: 140px;
+			}
+		}
+		.videoMessage{
+			position: absolute;
+			bottom: 10px;
+			right: 10px;
+			color: #ccc;
+		}
+		.fr1{
+			padding-left: 25px;
+			margin-right: 5px;
+			background: url(../images/playMain/Message_ic.png) no-repeat 0 center;
+			background-size: 17px 13px;
+		}
+		.fr2{
+			padding-left: 25px;
+			background: url(../images/playMain/Eye_ic.png) no-repeat 0 center;
+			background-size: 17px 13px;
+		}
+		//更多视频图片高度
+		.more-video-img{
+			height: 120px;
+		}
+		> a > div:nth-child(2){
+			padding: 10px;
+			color: #6f6f6f;
+		}
+		img{
+			width: 100%;
+		}
+		span.watermark{
+			position: absolute;
+			top: 50px;
+			left: 50%;
+			margin-left: -20px;
+			img{
+				width: 40px;
+				height: 40px;
+			}
+		}
+		.listTitle{
+			font-size: 1.4rem;
+			color: #434343;
+			/*
+			overflow: hidden;
+			white-space: nowrap;
+			text-overflow: ellipsis;
+			*/
+			//line-height: 23px;
+		}
+		.listTxt{
+			margin-top: 10px;
+			font-size: 1.2rem;
+			color: #6f6f6f;
+			overflow: hidden;
+			white-space: nowrap;
+			text-overflow: ellipsis;
+			//line-height: 20px;
+		}
+	}
+}
+.viewNum{
+	//float: right;
+	position: absolute;
+	bottom: 10px;
+	right: 10px;
+	background: url(../images/doctor/Eye_ic.png) no-repeat 0 center;
+	background-size: 17px 13px;
+	padding-left: 25px;
+	color: #999;
+	font-size: 1.2rem;
+}
+.ilikecnt{
+	//float: right;
+	position: absolute;
+	bottom: 10px;
+	right: 60px;
+	background: url(../images/playMain/Message_ic.png) no-repeat 0 center;
+	background-size: 17px 13px;
+	padding-left: 25px;
+	color: #999;
+	font-size: 1.2rem;
+}
+.mediaType{
+	position: absolute;
+	bottom: 10px;
+	left: 10px;
+	line-height: 12px;
+	color: #ed4542;
+	font-size: 1rem;
+	border: 1px solid #ed4542;
+	border-radius: 5px;
+	padding: 2px 5px;
+}

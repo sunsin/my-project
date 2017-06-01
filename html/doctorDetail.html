@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>大夫说</title>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <script src="../js/jquery-3.0.0.min.js"></script>
+    <script src="../js/bower_components/fastclick/lib/fastclick.js"></script>
+    <script>
+        $(function(){
+            FastClick.attach(document.body);
+        })
+    </script>
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+    <script src='../js/bootstrap.min.js'></script>
+    <link rel="stylesheet" href="../css/public.css" class="publiccss" />
+    <script src="../js/dfs.js"></script>
+    <script src="../js/jquery.cookie.js"></script>
+    <link rel="stylesheet" href="../css/doctorDetail.css" class="doctorDetail">
+    <script src="../js/bower_components/qrcode.js/qrcode.js"></script>
+    <script src="../js/get_info.js"></script>
+    <script src="../js/dfs_weixin.js"></script>
+    <script src="../js/get_ticket_doctor.js"></script>
+    <script src="../js/jssdk.js"></script>
+</head>
+<body>
+
+    <div class="erweima">
+        <img src="../images/icon/ic-erweima.png">
+        <div>二维码</div>
+    </div>
+    <div class="erweima-img">
+        <div class='qr'>
+            <div id="qrcode"></div>
+            <div>请扫二维码</div>
+        </div>
+    </div>
+
+    <doctor></doctor>
+    <navlists></navlists>
+</body>
+
+<script src="../js/riot+compiler.min.js"></script>
+<script src="../js/riotcontrol.js"></script>
+<script src="../js/store/videoDetailStore.js"></script>
+<script type="riot/tag" src="../js/riot/doctorDetail.tag"></script>
+<script type="riot/tag" src="../js/riot/nav.tag"></script>
+<script type="text/javascript">
+
+    $(function(){
+
+        var vdstore = new VideoDetailStore();
+        RiotControl.addStore(vdstore);
+        riot.mount("*");
+    })
+</script>
+
+<script>
+    var url;
+    var token = jQuery.parseJSON($.cookie("dfs_token"));
+    //console.log(token.id);
+    if(location.search.indexOf("loginid") == -1){
+        url = window.location.href.split("&")[0] + "&loginid=" +token.userId;
+    }else{
+        url = window.location.href;
+    }
+    console.log(url);
+    var qrcode = new QRCode(document.getElementById("qrcode"), {
+        text: url,
+        width: 175,
+        height: 175,
+        colorDark : "#000000",
+        colorLight : "#ffffff",
+        correctLevel : QRCode.CorrectLevel.H
+    });
+
+</script>
+</html>
